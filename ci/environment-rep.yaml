@@ -1,3 +1,4 @@
+name: rep
 channels:
   - nlesc
 dependencies:

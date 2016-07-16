@@ -20,7 +20,7 @@ fi
 if [ -n "$TRAVIS_PYTHON_VERSION" ] ; then
     PYTHON_MAJOR_VERSION=${TRAVIS_PYTHON_VERSION:0:1}
 fi
-REP_ENV_NAME="rep_py${PYTHON_MAJOR_VERSION}"
+REP_ENV_NAME="rep"
 
 # checking that system has apt-get
 if which apt-get > /dev/null; then
