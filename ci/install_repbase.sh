@@ -79,7 +79,7 @@ source activate jupyterhub_py3 || halt "Error installing jupyterhub_py3 environm
 
 echo "Removing conda packages and caches"
 conda uninstall --force --yes -q gcc qt
-conda install psutil
+conda install --yes psutil
 conda clean --yes --all
 
 
@@ -89,7 +89,8 @@ source activate $REP_ENV_NAME || halt "Error installing $REP_ENV_NAME environmen
 
 echo "Removing conda packages and caches"
 conda uninstall --force --yes -q gcc qt
-conda clean --yes -s -p -l -i -t
+conda install --yes psutil
+conda clean --yes --all
 
 
 # test installed packages
