@@ -79,7 +79,7 @@ source activate jupyterhub_py3 || halt "Error installing jupyterhub_py3 environm
 
 echo "Removing conda packages and caches"
 conda uninstall --force --yes -q gcc qt
-conda clean --yes -s -p -l -i -t
+conda clean --yes -p -l -i -t
 
 
 echo "Creating conda venv $REP_ENV_NAME"
