@@ -79,17 +79,15 @@ source activate jupyterhub_py3 || halt "Error installing jupyterhub_py3 environm
 
 echo "Removing conda packages and caches"
 conda uninstall --force --yes -q gcc qt
-conda install --yes psutil
 conda clean --yes --all
 
 
 echo "Creating conda venv $REP_ENV_NAME"
-conda env create -q --name $REP_ENV_NAME python=$PYTHON_MAJOR_VERSION --file $REP_ENV_FILE > /dev/null
+conda env create -q --name $REP_ENV_NAME python=$PYTHON_MAJOR_VERSION --file $REP_ENV_FILE
 source activate $REP_ENV_NAME || halt "Error installing $REP_ENV_NAME environment"
 
 echo "Removing conda packages and caches"
 conda uninstall --force --yes -q gcc qt
-conda install --yes psutil
 conda clean --yes --all
 
 
