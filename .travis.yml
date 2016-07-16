@@ -25,6 +25,7 @@ before_install:
       virtualenv venv -p python$TRAVIS_PYTHON_VERSION;
       source venv/bin/activate;
       source $(brew --prefix root)/libexec/thisroot.sh;
+      root --help
       pip install pip -U;
       pip install -r requirements.txt;
       pip install rootpy root_numpy;

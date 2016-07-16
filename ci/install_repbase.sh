@@ -73,12 +73,12 @@ HERE="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 REP_ENV_FILE="$HERE/environment-rep.yaml"
 JUPYTERHUB_ENV_FILE="$HERE/environment-jupyterhub.yaml"
 
-echo "Creating conda venv jupyterhub_py3"
-conda env create -q --name jupyterhub_py3 --file $JUPYTERHUB_ENV_FILE > /dev/null
-source activate jupyterhub_py3 || halt "Error installing jupyterhub_py3 environment"
+#echo "Creating conda venv jupyterhub_py3"
+#conda env create -q --name jupyterhub_py3 --file $JUPYTERHUB_ENV_FILE > /dev/null
+#source activate jupyterhub_py3 || halt "Error installing jupyterhub_py3 environment"
 
-echo "Removing conda packages and caches"
-conda uninstall --force --yes -q gcc qt
+#echo "Removing conda packages and caches"
+#conda uninstall --force --yes -q gcc qt
 # conda clean --yes --all
 
 
