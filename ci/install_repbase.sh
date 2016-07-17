@@ -97,6 +97,9 @@ source "${ENV_BIN_DIR}/thisroot.sh" || halt "Error installing ROOT"
 python -c 'import ROOT, root_numpy' || halt "Error installing root_numpy"
 python -c 'import xgboost' || halt "Error installing XGBoost"
 
+echo "Python version:"
+python --version
+
 # printing message about environment
 cat << EOL_MESSAGE
     # add to your environment:
