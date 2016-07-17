@@ -58,7 +58,7 @@ if ! which conda ; then
     if [ "$PYTHON_MAJOR_VERSION" == "3" ]; then
         MINICONDA_FILE="Miniconda3-3.19.0-Linux-x86_64.sh"
     else
-        MINICONDA_FILE="Miniconda-3.19.0-Linux-x86_64.sh"
+        MINICONDA_FILE="Miniconda2-3.19.0-Linux-x86_64.sh"
     fi
     wget http://repo.continuum.io/miniconda/$MINICONDA_FILE -O miniconda.sh
     chmod +x miniconda.sh
