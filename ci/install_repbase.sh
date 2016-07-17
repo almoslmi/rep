@@ -66,7 +66,7 @@ if ! which conda ; then
     rm ./miniconda.sh
     export PATH=$HOME/miniconda/bin:$PATH
     hash -r
-    conda update --yes conda
+    # conda update --yes conda
 fi
 
 HERE="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
