@@ -84,7 +84,7 @@ JUPYTERHUB_ENV_FILE="$HERE/environment-jupyterhub.yaml"
 
 echo "Creating conda venv $REP_ENV_NAME"
 conda env create -q --name $REP_ENV_NAME python=$PYTHON_MAJOR_VERSION --file $REP_ENV_FILE
-conda install psutil
+conda install psutil --yes
 source activate $REP_ENV_NAME || halt "Error installing $REP_ENV_NAME environment"
 
 echo "Removing conda packages and caches"
