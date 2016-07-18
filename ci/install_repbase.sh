@@ -93,7 +93,8 @@ conda clean --yes --all
 
 
 # test installed packages
-source "${ENV_BIN_DIR}/thisroot.sh" || halt "Error installing ROOT"
+source "$source (which thisroot.sh) " || halt "Error installing ROOT"
+
 python -c 'import ROOT, root_numpy' || halt "Error installing root_numpy"
 python -c 'import xgboost' || halt "Error installing XGBoost"
 
